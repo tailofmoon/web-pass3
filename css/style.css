@@ -24,6 +24,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    margin: 0 auto;
 }
 
 header h1 a img { width: 200px;}
@@ -38,6 +39,7 @@ nav {
 nav a { 
     color: #fff;
     display: block;
+    transition-duration: 0.5s;
 }
 
 /* 1단계 메뉴 */
@@ -74,5 +76,21 @@ nav .depth1 > li > a:hover {
 
 .depth2 {
     margin-top: 10px;
-    background: #666;
+    background: #fff;
+}
+
+/* 2단계 메뉴 효과(부드럽게 나타났다 사라졌다) */
+/* 안보임(기본) */
+nav .depth2 a { color: #333;}
+nav .depth2 {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/* 보이는 상태 */
+nav .depth2.active {
+    height: 100px;
+    opacity: 1;
 }
